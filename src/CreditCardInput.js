@@ -75,14 +75,14 @@ export default class CreditCardInput extends Component {
       number: "CARD NUMBER",
       expiry: "EXPIRY",
       cvc: "CVC/CCV",
-      postalCode: "POSTAL CODE",
+      postalCode: "POSTCODE",
     },
     placeholders: {
       name: "Full Name",
       number: "1234 5678 1234 5678",
       expiry: "MM/YY",
       cvc: "CVC",
-      postalCode: "34567",
+      postalCode: "A1 2BC",
     },
     inputContainerStyle: {
       borderBottomWidth: 1,
@@ -192,7 +192,6 @@ export default class CreditCardInput extends Component {
               containerStyle={[s.inputContainer, inputContainerStyle, { width: NAME_INPUT_WIDTH }]} /> }
           { requiresPostalCode &&
             <CCInput {...this._inputProps("postalCode")}
-              keyboardType="numeric"
               containerStyle={[s.inputContainer, inputContainerStyle, { width: POSTAL_CODE_INPUT_WIDTH }]} /> }
         </ScrollView>
       </View>
